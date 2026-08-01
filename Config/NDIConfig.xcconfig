@@ -1,0 +1,6 @@
+NDI_SDK_DIR = /Library/NDI SDK for Apple
+HEADER_SEARCH_PATHS = $(inherited) "$(NDI_SDK_DIR)/include"
+LIBRARY_SEARCH_PATHS = $(inherited) "/Library/NDI SDK for Apple/lib/macOS"
+OTHER_LDFLAGS = $(inherited) -lndi
+LD_RUNPATH_SEARCH_PATHS = $(inherited) @executable_path/../Frameworks
+NDI_DYLIB_PATH = /Library/NDI SDK for Apple/lib/macOS/libndi.dylib
