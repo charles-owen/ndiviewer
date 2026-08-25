@@ -17,7 +17,8 @@ final class NDIViewModel: ObservableObject {
     @Published var showingError = false
     @Published var errorMessage = ""
 
-    private let client = NDIClient()
+   private let finder = NDIFinder()
+   private let client = NDIClient()
     private var refreshTask: Task<Void, Never>?
 
     init() {
@@ -40,6 +41,12 @@ final class NDIViewModel: ObservableObject {
             showError(client.lastError ?? "Could not initialize the NDI runtime.")
             return
         }
+       
+       guard finder.initialize() else {
+          showError(finder.lastError ?? "Could not initialize the NDI runtime.")
+          return
+       }
+       
         statusText = "Searching for NDI sources..."
         refreshSources()
         refreshTask?.cancel()
@@ -56,11 +63,12 @@ final class NDIViewModel: ObservableObject {
         refreshTask = nil
         disconnect()
         client.shutdown()
+       finder.shutdown()
     }
 
     func refreshSources(showSpinner: Bool = true) {
         if showSpinner { isRefreshing = true }
-        client.discoverSources { [weak self] names in
+        finder.discoverSources { [weak self] names in
             Task { @MainActor in
                 guard let self else { return }
                 let previousSelection = self.selectedSourceID
