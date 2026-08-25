@@ -166,8 +166,11 @@
     if (!provider) return nullptr;
 
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
-    CGBitmapInfo bitmapInfo = kCGBitmapByteOrder32Little | kCGImageAlphaPremultipliedFirst;
-    CGImageRef image = CGImageCreate(width, height, 8, 32, bytesPerRow, colorSpace,
+   CGBitmapInfo bitmapInfo =
+   kCGBitmapByteOrder32Little |
+   (CGBitmapInfo)kCGImageAlphaPremultipliedFirst;
+   
+   CGImageRef image = CGImageCreate(width, height, 8, 32, bytesPerRow, colorSpace,
                                      bitmapInfo, provider, nullptr, false,
                                      kCGRenderingIntentDefault);
     CGColorSpaceRelease(colorSpace);
