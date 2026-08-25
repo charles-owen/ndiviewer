@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84C895F7303D17F90077715E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 84C895F6303D17F90077715E /* .gitignore */; };
+		84DF2F75301E7211003979DB /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 84DF2F74301E7211003979DB /* LICENSE */; };
+		84DF2F77301E7232003979DB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 84DF2F76301E7232003979DB /* README.md */; };
 		A10000000000000000000001 /* NDIViewerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000001 /* NDIViewerApp.swift */; };
 		A10000000000000000000002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000002 /* ContentView.swift */; };
 		A10000000000000000000003 /* NDIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000003 /* NDIViewModel.swift */; };
@@ -15,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		84C895F6303D17F90077715E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		84DF2F74301E7211003979DB /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		84DF2F76301E7232003979DB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A20000000000000000000001 /* NDIViewerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDIViewerApp.swift; sourceTree = "<group>"; };
 		A20000000000000000000002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A20000000000000000000003 /* NDIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDIViewModel.swift; sourceTree = "<group>"; };
@@ -44,11 +50,14 @@
 		A40000000000000000000001 = {
 			isa = PBXGroup;
 			children = (
+				84C895F6303D17F90077715E /* .gitignore */,
 				A40000000000000000000002 /* NDIViewer */,
 				A40000000000000000000003 /* Config */,
 				A40000000000000000000004 /* Scripts */,
 				A40000000000000000000005 /* Frameworks */,
 				A40000000000000000000006 /* Products */,
+				84DF2F74301E7211003979DB /* LICENSE */,
+				84DF2F76301E7232003979DB /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -158,6 +167,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84DF2F77301E7232003979DB /* README.md in Resources */,
+				84C895F7303D17F90077715E /* .gitignore in Resources */,
+				84DF2F75301E7211003979DB /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

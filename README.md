@@ -2,6 +2,8 @@
 
 A native SwiftUI macOS application that discovers NDI sources, connects to a selected source, and displays received video.
 
+I created this because I could not find any other good examples of using NDI in a SWIFT application under Mac OS. 
+
 ## Requirements
 
 - macOS 14 or later
