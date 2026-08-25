@@ -11,7 +11,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (BOOL)initialize;
 - (void)shutdown;
-- (void)discoverSources:(void (^)(NSArray<NSString *> *names))completion;
 - (BOOL)connectToSourceNamed:(NSString *)sourceName;
 - (void)disconnect;
 @end
